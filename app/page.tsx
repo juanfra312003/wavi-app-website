@@ -66,9 +66,12 @@ export default function Home() {
           <p className="text-xl mb-8 max-w-2xl mx-auto">
             Contáctanos hoy y descubre cómo Wavi puede ayudarte a alcanzar tus objetivos.
           </p>
-          <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition">
+          <a 
+            href="mailto:contacto@wavi.co" 
+            className="inline-block bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition"
+          >
             Contactar
-          </button>
+          </a>
         </div>
       </section>
     </div>
