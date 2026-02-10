@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import './globals.css'
-import Navigation from '@/components/Navigation'
+import Header from '@/components/Header'
+import Footer from '@/components/Footer'
 
 export const metadata: Metadata = {
   title: 'Wavi - Colombia',
@@ -15,15 +16,11 @@ export default function RootLayout({
   return (
     <html lang="es">
       <body>
-        <Navigation />
-        <main className="min-h-screen">
+        <Header />
+        <main className="min-h-screen pt-16">
           {children}
         </main>
-        <footer className="bg-gray-800 text-white py-8 mt-auto">
-          <div className="container mx-auto px-4 text-center">
-            <p>&copy; {new Date().getFullYear()} Wavi. Todos los derechos reservados.</p>
-          </div>
-        </footer>
+        <Footer />
       </body>
     </html>
   )

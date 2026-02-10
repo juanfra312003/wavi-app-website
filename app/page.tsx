@@ -1,77 +1,105 @@
-import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Home() {
   return (
-    <div className="bg-gradient-to-b from-blue-50 to-white">
-      {/* Hero Section */}
-      <section className="container mx-auto px-4 py-20 text-center">
-        <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
-          Bienvenido a Wavi
-        </h1>
-        <p className="text-xl md:text-2xl text-gray-700 mb-8 max-w-3xl mx-auto">
-          Tu solución empresarial en Colombia. Innovación, calidad y compromiso.
-        </p>
-        <div className="flex flex-wrap gap-4 justify-center">
-          <Link 
-            href="/quienes-somos"
-            className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition"
-          >
-            Conócenos
-          </Link>
-          <Link 
-            href="/politicas-de-privacidad"
-            className="bg-gray-200 text-gray-800 px-8 py-3 rounded-lg font-semibold hover:bg-gray-300 transition"
-          >
-            Nuestras Políticas
-          </Link>
+    <div className="bg-white">
+      {/* Hero Section with Background Image */}
+      <section className="relative h-[55vh] md:h-[60vh] w-full pt-16">
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/Imagenes pagina web/Banner principal .png"
+            alt="Mapa con ubicaciones"
+            fill
+            className="object-cover"
+            priority
+          />
         </div>
-      </section>
-
-      {/* Features Section */}
-      <section className="container mx-auto px-4 py-20">
-        <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-12">
-          ¿Por qué elegir Wavi?
-        </h2>
-        <div className="grid md:grid-cols-3 gap-8">
-          <div className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition">
-            <div className="text-blue-600 text-4xl mb-4">🚀</div>
-            <h3 className="text-xl font-bold mb-3 text-gray-900">Innovación</h3>
-            <p className="text-gray-600">
-              Soluciones tecnológicas de vanguardia adaptadas a las necesidades de tu empresa.
-            </p>
-          </div>
-          <div className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition">
-            <div className="text-blue-600 text-4xl mb-4">💼</div>
-            <h3 className="text-xl font-bold mb-3 text-gray-900">Experiencia</h3>
-            <p className="text-gray-600">
-              Años de trayectoria respaldando el crecimiento de empresas colombianas.
-            </p>
-          </div>
-          <div className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition">
-            <div className="text-blue-600 text-4xl mb-4">🤝</div>
-            <h3 className="text-xl font-bold mb-3 text-gray-900">Compromiso</h3>
-            <p className="text-gray-600">
-              Tu éxito es nuestro éxito. Trabajamos contigo en cada paso del camino.
-            </p>
+        <div className="relative z-10 flex items-center h-full px-[5%] lg:px-[10%]">
+          <div className="max-w-2xl">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 leading-tight">
+              Te ayudamos a encontrar actividades cercanas a ti
+            </h1>
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="bg-blue-600 text-white py-20">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            ¿Listo para transformar tu empresa?
-          </h2>
-          <p className="text-xl mb-8 max-w-2xl mx-auto">
-            Contáctanos hoy y descubre cómo Wavi puede ayudarte a alcanzar tus objetivos.
-          </p>
-          <a 
-            href="mailto:contacto@wavi.co" 
-            className="inline-block bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition"
-          >
-            Contactar
-          </a>
+      {/* Únete a WAVI Section */}
+      <section className="bg-[#48D7FF] py-16 px-[5%] lg:px-[10%]">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-3">
+              Únete a <span className="font-extrabold">WAVI</span>
+            </h2>
+            <p className="text-white text-lg md:text-xl">
+              Navega entre cientos de opciones
+            </p>
+          </div>
+
+          {/* Three Cards */}
+          <div className="grid md:grid-cols-3 gap-6 lg:gap-8">
+            {/* Card 1 - Descubre */}
+            <div className="flex flex-col">
+              <h3 className="text-xl font-bold text-white text-center mb-3">
+                1. Descubre
+              </h3>
+              <div className="relative rounded-2xl overflow-hidden shadow-lg h-64 md:h-72">
+                <Image
+                  src="/Imagenes pagina web/Explorar.png"
+                  alt="Explorar"
+                  fill
+                  className="object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                <div className="absolute bottom-0 left-0 right-0 p-4 text-white text-center">
+                  <p className="text-base font-bold">
+                    Explora los mejores<br/>planes y promociones
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Card 2 - Reserva */}
+            <div className="flex flex-col">
+              <h3 className="text-xl font-bold text-white text-center mb-3">
+                2. Reserva
+              </h3>
+              <div className="relative rounded-2xl overflow-hidden shadow-lg h-64 md:h-72">
+                <Image
+                  src="/Imagenes pagina web/Reservar.png"
+                  alt="Reservar"
+                  fill
+                  className="object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                <div className="absolute bottom-0 left-0 right-0 p-4 text-white text-center">
+                  <p className="text-base font-bold">
+                    Asegura tu plan al<br/>instante
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Card 3 - Disfruta */}
+            <div className="flex flex-col">
+              <h3 className="text-xl font-bold text-white text-center mb-3">
+                3. Disfruta
+              </h3>
+              <div className="relative rounded-2xl overflow-hidden shadow-lg h-64 md:h-72">
+                <Image
+                  src="/Imagenes pagina web/Disfrutar.png"
+                  alt="Disfrutar"
+                  fill
+                  className="object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                <div className="absolute bottom-0 left-0 right-0 p-4 text-white text-center">
+                  <p className="text-base font-bold">
+                    Vive la experiencia
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
     </div>
